@@ -12,10 +12,7 @@ class GitController extends AbstractController
     #[Route("/check-head", name: "check_head", methods: ["GET"])]
 
 
-    public function checkHead(): Response
-     {
-        public function checkHead(): Response
-        {
+    public function checkHead(): Response{
             $arr = [];
             $returnStatus = 0;
             
@@ -30,5 +27,5 @@ class GitController extends AbstractController
             // Return a 200 response indicating the script was executed
             return new Response('Upgrade script executed and SHA updated. ' . json_encode($arr), 200);
         }
-    }
+    
 }
