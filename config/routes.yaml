@@ -17,3 +17,9 @@ controllers:
     prefix: /{_locale}
     defaults:
         _locale: '%locale%'
+controllers_without_locale:
+    resource:
+        path: '../src/Controller/GitController.php'
+        namespace: App\Controller
+    type: attribute
+    prefix: /
