@@ -17,9 +17,6 @@ class GitController extends AbstractController
             // Call the upgrade.sh script
             exec(__DIR__ . 'upgrade.sh');
     
-            // Write the new SHA to sha.txt
-            file_put_contents('sha.txt', $currentHead);
-    
             // Return a 200 response indicating the script was executed
             return new Response('Upgrade script executed and SHA updated.', 200);
     }
