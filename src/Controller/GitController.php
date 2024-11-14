@@ -25,7 +25,7 @@ class GitController extends AbstractController
             }
     
             // Return a 200 response indicating the script was executed
-            return new Response('Upgrade script executed and SHA updated. ' . json_encode($arr2), 200);
+            return new Response('Upgrade script executed and SHA updated. ' . json_encode($arr), 200);
         }
     
 }
