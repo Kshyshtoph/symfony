@@ -21,7 +21,7 @@ class GitController extends AbstractController
             var_dump(shell_exec('echo "dupa"; file=$(find $HOME -name upgrade.sh);'));
             if ($returnStatus !== 0) {
                 // Return a 500 response indicating the script was not executed successfully
-                return new Response('STH went wrong. ' . json_encode($arr2), 500);
+                return new Response('STH went wrong. ' . json_encode($arr), 500);
             }
     
             // Return a 200 response indicating the script was executed
