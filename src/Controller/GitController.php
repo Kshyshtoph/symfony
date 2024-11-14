@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class GitController extends AbstractController
 {
-    #[Route("/check-head", name: "check_head", methods: ["POST"])]
+    #[Route("/check-head", name: "check_head", methods: ["GET"])]
 
     public function checkHead(): Response
     {
