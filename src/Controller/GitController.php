@@ -16,7 +16,7 @@ class GitController extends AbstractController
      {
         $arr=[];
             // Call the upgrade.sh script
-            if(!exec(__DIR__ . 'upgrade.sh', $arr)){
+            if(!exec(__DIR__ . '/../upgrade.sh', $arr)){
                 // Return a 500 response indicating the script was not executed successfully
                 return new Response('STH went wrong. ' . json_encode($arr), 500);                    
             }
