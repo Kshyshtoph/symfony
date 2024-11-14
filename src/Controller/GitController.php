@@ -16,12 +16,12 @@ class GitController extends AbstractController
      {
         $arr=[];
             // Call the upgrade.sh script
-            if(!exec('find ${HOME} upgrade.sh')){
+            if(!exec('find ${HOME} -name upgrade.sh')){
                 // Return a 500 response indicating the script was not executed successfully
                 return new Response('STH went wrong. ' . json_encode($arr), 500);                    
             }
 
         // Return a 200 response indicating the script was executed
-        return new Response('Upgrade script executed and SHA updated.', 200);
+        return new Response('Upgrade script executed and SHA updated.'  . json_encode($arr), 200);
     }
 }
