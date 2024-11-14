@@ -11,6 +11,7 @@ class GitController extends AbstractController
 {
     #[Route("/check-head", name: "check_head", methods: ["GET"])]
 
+    
     public function checkHead(): Response
     {
         // Get the GitHub repository owner and name from environment variables
